@@ -1,0 +1,38 @@
+{
+  "name": "com.bankerise.keycloakauthentication.sample",
+  "displayName": "sample",
+  "version": "1.1.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-ios": "^6.2.0",
+    "cordova-plugin-bankerise-keycloak-authentication": "git+ssh://git@gitlab.proxym-group.net:3022/cordova-plugins/bankerise-keycloak-authentication.git",
+    "cordova-plugin-customurlscheme": "^5.0.2",
+    "cordova-plugin-whitelist": "^1.3.5"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "albaraka",
+        "ANDROID_SCHEME": " ",
+        "ANDROID_HOST": " ",
+        "ANDROID_PATHPREFIX": "/"
+      },
+      "cordova.plugin.bankerise.keycloakauthentication": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

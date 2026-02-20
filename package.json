@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-bankerise-keycloak-authentication",
+  "version": "1.1.0",
+  "cordova": {
+    "id": "cordova-plugin-bankerise-keycloakauthentication",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "Mourad Brahim",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.proxym-group.net/2026_pifss_migrationbybankerise/custom-plugin-keycloak.git"
+  },
+  "description": ""
+}

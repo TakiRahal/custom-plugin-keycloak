@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-bankerise-keycloakauthentication"
+    version="1.1.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>BankeriseKeycloakAuthentication</name>
+    <js-module name="BankeriseKeycloakAuthentication" src="www/BankeriseKeycloakAuthentication.js">
+        <clobbers target="cordova.plugins.BankeriseKeycloakAuthentication" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BankeriseKeycloakAuthentication">
+                <param name="ios-package" value="BankeriseKeycloakAuthentication" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/BankeriseKeycloakAuthentication.m" />
+        <header-file src="src/ios/BankeriseKeycloakAuthentication.h" />
+        <source-file src="src/ios/WKWebViewController.m" />
+        <header-file src="src/ios/WKWebViewController.h" />
+    </platform>
+    <platform name="android">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BankeriseKeycloakAuthentication">
+                <param name="android-package"
+                    value="cordova.plugin.bankerise.keycloakauthentication.BankeriseKeycloakAuthentication" />
+            </feature>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity
+                android:name="cordova.plugin.bankerise.keycloakauthentication.CordovaWebViewImplement"
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+                android:windowSoftInputMode="adjustResize" />
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/BankeriseKeycloakAuthentication.java"
+            target-dir="src/cordova.plugin.bankerise.keycloakauthentication" />
+        <source-file src="src/android/CordovaWebViewImplement.java"
+            target-dir="src/cordova.plugin.bankerise.keycloakauthentication" />
+        <source-file src="src/android/SharedConstants.java"
+            target-dir="src/cordova.plugin.bankerise.keycloakauthentication" />
+        <source-file src="src/android/res/anim/slide_in_left.xml" target-dir="res/anim" />
+        <source-file src="src/android/res/anim/slide_in_right.xml" target-dir="res/anim" />
+        <source-file src="src/android/res/anim/slide_out_left.xml" target-dir="res/anim" />
+        <source-file src="src/android/res/anim/slide_out_right.xml" target-dir="res/anim" />
+        <source-file src="src/android/res/layout/cordova_webview.xml" target-dir="res/layout" />
+        <framework src="com.android.support:customtabs:28.0.0" />
+        <framework src="androidx.appcompat:appcompat:1.3.1" />
+        <framework src="androidx.webkit:webkit:1.2.0" />
+    </platform>
+</plugin>
